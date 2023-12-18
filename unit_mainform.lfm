@@ -1,7 +1,7 @@
 object FormMain: TFormMain
-  Left = 388
+  Left = 324
   Height = 353
-  Top = 174
+  Top = 136
   Width = 634
   BorderStyle = bsDialog
   Caption = 'Flax Launcher Lite'
