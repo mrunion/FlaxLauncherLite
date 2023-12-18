@@ -1,0 +1,170 @@
+object FormMain: TFormMain
+  Left = 388
+  Height = 353
+  Top = 174
+  Width = 634
+  BorderStyle = bsDialog
+  Caption = 'Flax Launcher Lite'
+  ClientHeight = 353
+  ClientWidth = 634
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '2.2.6.0'
+  object PageControl: TPageControl
+    Left = 16
+    Height = 288
+    Top = 8
+    Width = 600
+    ActivePage = TabSheetProjects
+    TabIndex = 0
+    TabOrder = 0
+    object TabSheetProjects: TTabSheet
+      Hint = 'Create, add, remove or launch a Flax project'
+      Caption = 'Projects'
+      ClientHeight = 258
+      ClientWidth = 594
+      ParentShowHint = False
+      object ScrollBox1: TScrollBox
+        Left = 0
+        Height = 258
+        Top = 0
+        Width = 594
+        HorzScrollBar.Page = 1
+        VertScrollBar.Page = 1
+        Align = alClient
+        ClientHeight = 256
+        ClientWidth = 592
+        TabOrder = 0
+        object FlowPanelProjects: TFlowPanel
+          Left = 0
+          Height = 256
+          Top = 0
+          Width = 592
+          Align = alClient
+          ControlList = <>
+          FlowLayout = tlTop
+          FlowStyle = fsLeftRightTopBottom
+          PopupMenu = PopupMenuProjectsFlowPanel
+          TabOrder = 0
+        end
+      end
+    end
+    object TabSheetEngines: TTabSheet
+      Hint = 'Add or remove a Flax Engine version'
+      Caption = 'Engines'
+      ClientHeight = 258
+      ClientWidth = 594
+      PopupMenu = PopupMenuEnginesFlowPanel
+      object ScrollBox2: TScrollBox
+        Left = 0
+        Height = 258
+        Top = 0
+        Width = 594
+        HorzScrollBar.Page = 1
+        VertScrollBar.Page = 1
+        Align = alClient
+        ClientHeight = 256
+        ClientWidth = 592
+        TabOrder = 0
+        object FlowPanelEngines: TFlowPanel
+          Left = 0
+          Height = 256
+          Top = 0
+          Width = 592
+          Align = alClient
+          ControlList = <>
+          FlowLayout = tlTop
+          FlowStyle = fsLeftRightTopBottom
+          PopupMenu = PopupMenuEnginesFlowPanel
+          TabOrder = 0
+        end
+      end
+    end
+  end
+  object ButtonExit: TButton
+    Left = 536
+    Height = 25
+    Top = 312
+    Width = 75
+    Caption = 'Exit'
+    OnClick = ButtonExitClick
+    TabOrder = 1
+  end
+  object PopupMenuProjectsFlowPanel: TPopupMenu
+    Left = 112
+    Top = 112
+    object MenuItemNewProject: TMenuItem
+      Caption = 'New Project'
+      OnClick = MenuItemNewProjectClick
+    end
+    object MenuItemImportProject: TMenuItem
+      Caption = 'Import Project'
+      OnClick = MenuItemImportProjectClick
+    end
+  end
+  object PopupMenuEnginesFlowPanel: TPopupMenu
+    Left = 112
+    Top = 48
+    object MenuItemAddEngine: TMenuItem
+      Caption = 'Add Engine'
+      OnClick = MenuItemAddEngineClick
+    end
+  end
+  object SQLite3Connection1: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    AlwaysUseBigint = False
+    Left = 488
+    Top = 64
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = SQLite3Connection1
+    Left = 488
+    Top = 128
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = SQLite3Connection1
+    Transaction = SQLTransaction1
+    Params = <>
+    Macros = <>
+    Left = 488
+    Top = 192
+  end
+  object PopupMenuEngine: TPopupMenu
+    Left = 112
+    Top = 176
+    object MenuItemAddEngine2: TMenuItem
+      Caption = 'Add Engine'
+      OnClick = MenuItemAddEngine2Click
+    end
+    object MenuItemRemoveEngine: TMenuItem
+      Caption = 'Remove Engine'
+      OnClick = MenuItemRemoveEngineClick
+    end
+  end
+  object PopupMenuProject: TPopupMenu
+    Left = 112
+    Top = 240
+    object MenuItemNewProject2: TMenuItem
+      Caption = 'New Project'
+      OnClick = MenuItemNewProject2Click
+    end
+    object MenuItemImportProject2: TMenuItem
+      Caption = 'Import Project'
+      OnClick = MenuItemImportProject2Click
+    end
+    object MenuItemLaunchProject: TMenuItem
+      Caption = 'Launch Project'
+      OnClick = MenuItemLaunchProjectClick
+    end
+    object MenuItemRemoveProject: TMenuItem
+      Caption = 'Remove Project'
+      OnClick = MenuItemRemoveProjectClick
+    end
+  end
+end

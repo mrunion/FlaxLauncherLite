@@ -1,0 +1,107 @@
+object FormAddProject: TFormAddProject
+  Left = 385
+  Height = 155
+  Top = 741
+  Width = 400
+  BorderStyle = bsDialog
+  Caption = 'Add Project'
+  ClientHeight = 155
+  ClientWidth = 400
+  Position = poOwnerFormCenter
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 24
+    Height = 16
+    Top = 16
+    Width = 82
+    Caption = 'Project Name'
+    ParentColor = False
+  end
+  object EditProjectName: TEdit
+    Left = 120
+    Height = 22
+    Hint = 'Name used to refer to this project definition'
+    Top = 10
+    Width = 264
+    TabOrder = 0
+    TextHint = 'My Project'
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 16
+    Top = 54
+    Width = 74
+    Caption = 'Project Path'
+    ParentColor = False
+  end
+  object EditProjectPath: TEdit
+    Left = 120
+    Height = 22
+    Hint = 'Path to the folder for this project definition'
+    Top = 48
+    Width = 224
+    ReadOnly = True
+    TabOrder = 1
+    TextHint = '/path/to/myproject'
+  end
+  object ButtonSelectProject: TButton
+    Left = 352
+    Height = 25
+    Hint = 'Select Flax Project'
+    Top = 45
+    Width = 32
+    Caption = '...'
+    OnClick = ButtonSelectProjectClick
+    TabOrder = 2
+  end
+  object ComboBoxEngines: TComboBox
+    Left = 120
+    Height = 20
+    Top = 80
+    Width = 260
+    ItemHeight = 19
+    ParentShowHint = False
+    ReadOnly = True
+    TabOrder = 3
+    TextHint = 'Select Flax Engine'
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 16
+    Top = 84
+    Width = 41
+    Caption = 'Engine'
+    ParentColor = False
+  end
+  object ButtonSaveProject: TButton
+    Left = 216
+    Height = 25
+    Top = 112
+    Width = 75
+    Caption = 'Save'
+    Default = True
+    OnClick = ButtonSaveProjectClick
+    TabOrder = 4
+  end
+  object ButtonCancelProject: TButton
+    Left = 304
+    Height = 25
+    Top = 112
+    Width = 75
+    Cancel = True
+    Caption = 'Cancel'
+    OnClick = ButtonCancelProjectClick
+    TabOrder = 5
+  end
+  object OpenDialogProject: TSelectDirectoryDialog
+    Title = 'Select Project Directory'
+    Left = 40
+    Top = 104
+  end
+  object OpenDialogProjectFile: TOpenDialog
+    Title = 'Select Project File'
+    DefaultExt = '.flaxproj'
+    Left = 152
+    Top = 104
+  end
+end

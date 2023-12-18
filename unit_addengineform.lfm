@@ -1,0 +1,90 @@
+object FormAddEngine: TFormAddEngine
+  Left = 389
+  Height = 114
+  Top = 574
+  Width = 400
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Add Engine'
+  ClientHeight = 114
+  ClientWidth = 400
+  Position = poOwnerFormCenter
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 24
+    Height = 16
+    Top = 16
+    Width = 80
+    Caption = 'Engine Name'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 16
+    Top = 48
+    Width = 72
+    Caption = 'Engine Path'
+    ParentColor = False
+  end
+  object EditEngineName: TEdit
+    Left = 112
+    Height = 22
+    Hint = 'Name used to refer to this engine definition'
+    Top = 10
+    Width = 272
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+    TextHint = 'Flax Engine v6404'
+  end
+  object EditEnginePath: TEdit
+    Left = 112
+    Height = 22
+    Hint = 'Path to the Flax Editor for this engine definition'
+    Top = 42
+    Width = 224
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+    TextHint = '/path/to/flaxeditor'
+  end
+  object ButtonCancelEngine: TButton
+    Left = 304
+    Height = 25
+    Top = 72
+    Width = 75
+    Cancel = True
+    Caption = 'Cancel'
+    OnClick = ButtonCancelEngineClick
+    TabOrder = 2
+  end
+  object ButtonSaveEngine: TButton
+    Left = 216
+    Height = 25
+    Top = 72
+    Width = 75
+    Caption = 'Save'
+    Default = True
+    OnClick = ButtonSaveEngineClick
+    TabOrder = 3
+  end
+  object ButtonSelectEngine: TButton
+    Left = 345
+    Height = 20
+    Hint = 'Select Flax Engine'
+    Top = 42
+    Width = 33
+    AutoSize = True
+    Caption = '...'
+    OnClick = ButtonSelectEngineClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 4
+  end
+  object OpenDialogEngine: TOpenDialog
+    Title = 'Select Flax Engine'
+    Options = [ofPathMustExist, ofFileMustExist, ofEnableSizing, ofViewDetail]
+    Left = 40
+    Top = 64
+  end
+end
