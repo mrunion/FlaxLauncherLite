@@ -3,7 +3,7 @@ object FormMain: TFormMain
   Height = 353
   Top = 178
   Width = 634
-  BorderStyle = bsDialog
+  BorderStyle = bsSingle
   Caption = 'Flax Launcher Lite'
   ClientHeight = 353
   ClientWidth = 634
@@ -90,6 +90,15 @@ object FormMain: TFormMain
     Caption = 'Exit'
     OnClick = ButtonExitClick
     TabOrder = 1
+  end
+  object ButtonAbout: TButton
+    Left = 16
+    Height = 25
+    Top = 312
+    Width = 75
+    Caption = 'About'
+    OnClick = AboutClick
+    TabOrder = 2
   end
   object PopupMenuProjectsFlowPanel: TPopupMenu
     Left = 112

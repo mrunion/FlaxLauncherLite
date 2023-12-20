@@ -1,0 +1,62 @@
+object FormAbout: TFormAbout
+  Left = 483
+  Height = 424
+  Top = 382
+  Width = 383
+  BorderStyle = bsDialog
+  Caption = 'About'
+  ClientHeight = 424
+  ClientWidth = 383
+  OnCreate = Create
+  Position = poScreenCenter
+  LCLVersion = '2.2.6.0'
+  object ImageFLLLogo: TImage
+    Left = 64
+    Height = 256
+    Top = 8
+    Width = 256
+    Center = True
+    Stretch = True
+    Transparent = True
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 16
+    Top = 280
+    Width = 345
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Flax Launcher Lite'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 16
+    Top = 304
+    Width = 347
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Created with Love from the USA'
+    ParentColor = False
+  end
+  object ButtonClose: TButton
+    Left = 152
+    Height = 25
+    Top = 384
+    Width = 75
+    Caption = 'Close'
+    OnClick = ButtonCloseClick
+    TabOrder = 0
+  end
+  object LabelDBInUse: TLabel
+    Left = 16
+    Height = 40
+    Top = 336
+    Width = 345
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'SQLite3 DB'
+    ParentColor = False
+    WordWrap = True
+  end
+end

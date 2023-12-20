@@ -7,7 +7,8 @@ interface
 uses
   Classes, SysUtils, LResources, SQLite3Conn, SQLDB, DB, Forms, Controls, Graphics, Dialogs,
   ComCtrls, StdCtrls, Menus, DBCtrls, ExtCtrls, Generics.Collections, Generics.Defaults, Process,
-  unit_addengineform, unit_addprojectform, unit_tfllbase, unit_tfllengine, unit_tfllproject;
+  unit_addengineform, unit_addprojectform, unit_tfllbase, unit_tfllengine, unit_tfllproject,
+  unit_about;
 
 type
   { Engine and Project object lists }
@@ -25,6 +26,7 @@ type
   { TFormMain }
 
   TFormMain = class(TForm)
+    ButtonAbout: TButton;
     ButtonExit: TButton;
     FlowPanelEngines: TFlowPanel;
     FlowPanelProjects: TFlowPanel;
@@ -49,6 +51,7 @@ type
     SQLTransaction1: TSQLTransaction;
     TabSheetProjects: TTabSheet;
     TabSheetEngines: TTabSheet;
+    procedure AboutClick(Sender: TObject);
     procedure ButtonExitClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -99,6 +102,13 @@ procedure TFormMain.ButtonExitClick(Sender: TObject);
 begin
   { Close the application }
   Close;
+end;
+
+procedure TFormMain.AboutClick(Sender: TObject);
+begin
+  { Show the about dialog as a modal }
+  FormAbout.LabelDBInUse.Caption := 'Using DB: ' + SQLite3Connection1.DatabaseName;
+  FormAbout.ShowModal;
 end;
 
 procedure TFormMain.FormCreate(Sender: TObject);
