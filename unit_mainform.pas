@@ -198,7 +198,7 @@ begin
         SQLTransaction1.Commit;
 
         { Remove the control for this engine }
-        TFLLPanel(FlowPanelEngines.FindChildControl('TFLLPanelEngine' + engine.EngineName)).Destroy;
+        TFLLPanel(FlowPanelEngines.FindChildControl('TFLLPanelEngine' + StringReplace(engine.EngineName, ' ', '', [rfReplaceAll]))).Destroy;
 
         LoadEngines;
         Exit;
@@ -247,7 +247,7 @@ begin
         SQLTransaction1.Commit;
 
         { Remove the control for this project }
-        TFLLPanel(FlowPanelProjects.FindChildControl('TFLLPanelProject' + project.ProjectName)).Destroy;
+        TFLLPanel(FlowPanelProjects.FindChildControl('TFLLPanelProject' + StringReplace(project.ProjectName, ' ', '', [rfReplaceAll]))).Destroy;
 
         LoadProjects;
         Exit;
