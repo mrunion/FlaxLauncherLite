@@ -373,6 +373,7 @@
         <Filename Value="unit_about.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormAbout"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit>
     </Units>

@@ -5,10 +5,11 @@ unit unit_mainform;
 interface
 
 uses
-  Classes, SysUtils, LResources, SQLite3Conn, SQLDB, DB, Forms, Controls, Graphics, Dialogs,
-  ComCtrls, StdCtrls, Menus, DBCtrls, ExtCtrls, Generics.Collections, Generics.Defaults, Process,
-  unit_addengineform, unit_addprojectform, unit_tfllbase, unit_tfllengine, unit_tfllproject,
-  unit_about;
+  Classes, SysUtils, LResources, SQLite3Conn, SQLDB, DB, Forms, Controls,
+  Graphics, Dialogs, ComCtrls, StdCtrls, Menus, DBCtrls, ExtCtrls, ActnList,
+  StdActns, Generics.Collections, Generics.Defaults, Process,
+  unit_addengineform, unit_addprojectform, unit_tfllbase, unit_tfllengine,
+  unit_tfllproject, unit_about;
 
 type
   { Engine and Project object lists }
@@ -26,10 +27,17 @@ type
   { TFormMain }
 
   TFormMain = class(TForm)
+    AAbout: TAction;
+    AExit: TAction;
+    ActionListMain: TActionList;
     ButtonAbout: TButton;
     ButtonExit: TButton;
     FlowPanelEngines: TFlowPanel;
     FlowPanelProjects: TFlowPanel;
+    MainMenu1: TMainMenu;
+    MenuItem1: TMenuItem;
+    MenuItem2: TMenuItem;
+    MenuItem3: TMenuItem;
     MenuItemAddEngine2: TMenuItem;
     MenuItemImportProject2: TMenuItem;
     MenuItemNewProject2: TMenuItem;

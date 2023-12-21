@@ -7,6 +7,7 @@ object FormMain: TFormMain
   Caption = 'Flax Launcher Lite'
   ClientHeight = 353
   ClientWidth = 634
+  Menu = MainMenu1
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   Position = poScreenCenter
@@ -174,6 +175,36 @@ object FormMain: TFormMain
     object MenuItemRemoveProject: TMenuItem
       Caption = 'Remove Project'
       OnClick = MenuItemRemoveProjectClick
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 313
+    Top = 164
+    object MenuItem1: TMenuItem
+      Caption = '&File'
+      object MenuItem2: TMenuItem
+        Action = AAbout
+      end
+      object MenuItem3: TMenuItem
+        Action = AExit
+      end
+    end
+  end
+  object ActionListMain: TActionList
+    Left = 313
+    Top = 232
+    object AExit: TAction
+      Category = 'File'
+      Caption = 'E&xit'
+      Hint = 'Quit this program'
+      OnExecute = ButtonExitClick
+      ShortCut = 16465
+    end
+    object AAbout: TAction
+      Category = 'Help'
+      Caption = '&About'
+      OnExecute = AboutClick
+      ShortCut = 16449
     end
   end
 end

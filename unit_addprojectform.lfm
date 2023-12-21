@@ -1,7 +1,7 @@
 object FormAddProject: TFormAddProject
-  Left = 385
+  Left = 280
   Height = 155
-  Top = 741
+  Top = 734
   Width = 400
   BorderStyle = bsDialog
   Caption = 'Add Project'

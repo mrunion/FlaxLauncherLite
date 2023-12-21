@@ -1,7 +1,7 @@
 object FormAddEngine: TFormAddEngine
-  Left = 389
+  Left = 283
   Height = 114
-  Top = 574
+  Top = 572
   Width = 400
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
@@ -83,7 +83,7 @@ object FormAddEngine: TFormAddEngine
   end
   object OpenDialogEngine: TOpenDialog
     Title = 'Select Flax Engine'
-    Options = [ofPathMustExist, ofFileMustExist, ofEnableSizing, ofViewDetail]
+    Options = [ofPathMustExist, ofEnableSizing, ofViewDetail]
     Left = 40
     Top = 64
   end
