@@ -17,9 +17,8 @@
     </General>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
-      <MinorVersionNr Value="2"/>
-      <Attributes pvaPreRelease="True"/>
-      <StringTable CompanyName="Dadburn" ProductName="Flax Launcher Lite" ProductVersion="0.2"/>
+      <MajorVersionNr Value="1"/>
+      <StringTable CompanyName="Dadburn" ProductName="Flax Launcher Lite" ProductVersion="1.0"/>
     </VersionInfo>
     <BuildModes>
       <Item Name="Default" Default="True"/>
