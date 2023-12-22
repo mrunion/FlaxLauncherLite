@@ -25,6 +25,7 @@ backup/
 *.bak
 lib/
 bin/
+deployment/
 
 # Application bundle for Mac OS
 *.app/

@@ -18,8 +18,8 @@ uses
 
 begin
   RequireDerivedFormResource := True;
-  Application.Title:='Flax Launcher Lite';
-  Application.Scaled:=True;
+  Application.Title := 'Flax Launcher Lite';
+  Application.Scaled := True;
   Application.Initialize;
   Application.CreateForm(TFormMain, FormMain);
   Application.CreateForm(TFormAddEngine, FormAddEngine);
